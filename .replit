@@ -1,1 +1,10 @@
-init
+modules = ["python-3.11"]
+run = "python3 -m http.server 8080 --directory public"
+
+[[ports]]
+localPort = 8080
+externalPort = 80
+
+[deployment]
+deploymentTarget = "static"
+publicDir = "public"
